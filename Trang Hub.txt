@@ -1,0 +1,105 @@
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=133364306674702"
+
+UICorner.CornerRadius = UDim.new(1, 10) 
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+repeat wait() until game:IsLoaded()
+local Window = Fluent:CreateWindow({
+    Title = "Trang Hub ",
+    SubTitle = "Blox Fruit",
+    TabWidth = 157,
+    Size = UDim2.fromOffset(450, 300),
+    Acrylic = true,
+    Theme = "Amethyst",
+    MinimizeKey = Enum.KeyCode.End
+})
+local Tabs = {
+        Main0=Window:AddTab({ Title="Thông Tin" }),
+        Main1=Window:AddTab({ Title="Script Farm" }),
+        Main2=Window:AddTab({ Title="Script AimBot" }),
+        Main3=Window:AddTab({ Title="Farm Chest" }),
+        Main4=Window:AddTab({ Title="Beta" }),
+       Main5=Window:AddTab({ Title="Script Linh Tinh" }),
+}
+    Tabs.Main0:AddButton({
+    Title = "Discord",
+    Description = "Trang Hub",
+    Callback = function()
+        setclipboard("https://discord.gg/CeZjVChn6")
+    end
+})
+ 
+Tabs.Main1:AddButton({
+    Title="Omg Hub ( Key )",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Xero Hub ( k dc thi t chiu )",
+    Description="",
+    Callback=function()
+	  getgenv().Team = "Marines"
+getgenv().Hide_Menu = false
+getgenv().Auto_Execute = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Quantum Onyx",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Teddy Hub",
+    Description="",
+    Callback=function()
+	  repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/4def2b8e661398d2"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Gravity Hub",
+    Description="",
+    Callback=function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Gravity Hub",
+    Description="",
+    Callback=function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+  end
+})
+
+Tabs.Main2:AddButton({
+    Title="Hermanos Hub",
+    Description="",
+    Callback=function()
+local script_mode = "PVP" -- PVP, FARM
+local loader = loadstring
+local url = "https://raw.githubusercontent.com/hermanos-dev/hermanos-hub/refs/heads/main/Loader.lua"
+local response = game:HttpGet(url)
+loader(response)()
+  end
+})
